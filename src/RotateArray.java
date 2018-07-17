@@ -1,14 +1,14 @@
 
 public class RotateArray {
 	/*
-	 * For Left rotation
+	 * For Left rotation. Divide array in two parts A & B
 	 *  A = Reverse(0 to k - 1)
 	 *  B = Reverse(k to arraylength -1)
 	 *  Then Reverse whole Array ( 0 to Arraylength-1)
 	 */
 	
 	/*
-	 * For Right rotation
+	 * For Right rotation. Divide array in two parts A & B
 	 *  A = Reverse(0 to arraylength - k - 1)
 	 *  B = Reverse(arraylength-k to arraylength -1)
 	 *  Then Reverse whole Array ( 0 to Arraylength-1)
