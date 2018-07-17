@@ -13,7 +13,8 @@ public class MajorElement {
 		}
 		return major;
 	}
-
+ 
+	// Another solution. Less time efficient
 	public int majorityElementAnotherSolution(int[] nums) {
 		Arrays.sort(nums);
 		int key = nums[0];
