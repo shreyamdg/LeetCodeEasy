@@ -1,7 +1,6 @@
 
 public class RemoveElement {
 	public static int removeElement(int[] nums, int val) {
-
 		int j = 0;
 		for (int i = 0; i < nums.length; i++) {
 			if (nums[i] != val) {
@@ -9,16 +8,12 @@ public class RemoveElement {
 				j++;
 			}
 		}
-		for (int k = j; k < nums.length; k++) {
-			nums[k] = 0;
-		}
-
-		return nums.length - j;
+		return j;
 	}
 
 	public static void main(String[] args) {
-		int[] arr = new int[] { 0, 1, 0, 3, 12 };
-		System.out.println(removeElement(arr, 0));
+		int[] arr = new int[] { 0, 1, 2, 2, 3, 0, 4, 2 };
+		System.out.println(removeElement(arr, 2));
 
 	}
 }
