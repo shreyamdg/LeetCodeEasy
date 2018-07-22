@@ -6,21 +6,19 @@ public class LongestCommonPrefix {
 		StringBuilder result = new StringBuilder();
 
 		if (strs != null && strs.length > 0) {
-
 			Arrays.sort(strs);
-		}
-		
-		for(String s: strs)
-			System.out.println(s);
+			for (String s : strs)
+				System.out.println(s);
 
-		char[] a = strs[0].toCharArray();
-		char[] b = strs[strs.length - 1].toCharArray();
+			char[] a = strs[0].toCharArray();
+			char[] b = strs[strs.length - 1].toCharArray();
 
-		for (int i = 0; i < a.length; i++) {
-			if (b.length > i && b[i] == a[i]) {
-				result.append(b[i]);
-			} else {
-				return result.toString();
+			for (int i = 0; i < a.length; i++) {
+				if (b.length > i && b[i] == a[i]) {
+					result.append(b[i]);
+				} else {
+					return result.toString();
+				}
 			}
 		}
 		return result.toString();
