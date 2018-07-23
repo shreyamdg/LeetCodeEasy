@@ -1,7 +1,7 @@
 import java.util.HashMap;
 
 public class FirstUniqueChar {
-	/*public static int firstUniqChar(String s) {
+	public static int firstUniqChar(String s) {
         HashMap<Character, Integer> map = new HashMap<>();
         for(char ch : s.toCharArray()){
             if(!map.containsKey(ch)){
@@ -18,11 +18,11 @@ public class FirstUniqueChar {
             
             return -1;
         
-    }*/
+    }
 	
 	// Without extra space. 
 	
-	public static int firstUniqChar(String s) {
+	public static int firstUniqAnotherWayChar(String s) {
 		int [] chars = new int[128];
 		for(int i = 0; i<s.length(); i++) {
 		    int val = s.charAt(i);
