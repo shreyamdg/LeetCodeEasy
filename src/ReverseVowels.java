@@ -25,9 +25,45 @@ public class ReverseVowels {
         
         return sb.toString();
     }
-
+	
+	// 3 ms solution.
+	public static String anotherSolution(String s) {
+		char [] arr = s.toCharArray();
+		int i = 0, j = s.length()-1;
+		
+		while(i<j) {
+			if(checkVowel(arr[i])) {
+				if(checkVowel(arr[j])) {
+					char c = arr[j];
+					arr[j] = arr[i];
+					arr[i] = c;
+					i++; j--;
+					continue;
+				}else {
+					j--; 
+					continue;
+				}
+			}
+			
+			i++;
+		}
+		
+		return new String(arr);
+	}
+	
+    public static boolean checkVowel(char ch) {
+    	if(ch == 'a' || ch == 'e' || ch == 'i'|| ch == 'o'|| ch == 'u'
+                || ch == 'A' || ch == 'E' || ch == 'I' || ch == 'O' || 
+                		ch == 'U') {
+    		return true;
+    	}
+    	
+    	return false;
+    }
+    
+	
 	public static void main(String[] args) {
-		System.out.println(reverseVowels("leetcode"));
+		System.out.println(anotherSolution("leetcode"));
 
 	}
 
