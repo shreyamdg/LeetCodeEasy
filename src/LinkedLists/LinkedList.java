@@ -1,6 +1,10 @@
 package LinkedLists;
 
 /*
+ * author: Shreyam Duttagupta
+ */
+
+/*
  * Defines a class node with Private fields: Data and Next.
  * Contains 4 methods which are getter and setters of private fields.
  */
