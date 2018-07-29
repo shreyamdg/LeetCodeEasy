@@ -1,3 +1,4 @@
+package ArraysAndStrings;
 
 public class StockOne {
 	public static int maxProfit(int[] prices) {

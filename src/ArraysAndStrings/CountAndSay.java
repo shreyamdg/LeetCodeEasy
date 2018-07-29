@@ -1,3 +1,4 @@
+package ArraysAndStrings;
 
 public class CountAndSay {
 	public static String countAndSay(int n) {

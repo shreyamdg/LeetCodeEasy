@@ -1,3 +1,4 @@
+package ArraysAndStrings;
 import java.util.Arrays;
 
 public class MajorElement {

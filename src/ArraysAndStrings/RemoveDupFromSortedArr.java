@@ -1,3 +1,4 @@
+package ArraysAndStrings;
 
 public class RemoveDupFromSortedArr {
 	public static int removeDuplicates(int[] nums) {

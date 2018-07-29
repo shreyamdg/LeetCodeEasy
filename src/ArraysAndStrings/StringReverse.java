@@ -1,3 +1,4 @@
+package ArraysAndStrings;
 
 public class StringReverse {
 	public static String reverseString(String s) {

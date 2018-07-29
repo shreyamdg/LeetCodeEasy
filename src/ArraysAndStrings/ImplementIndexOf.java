@@ -1,3 +1,4 @@
+package ArraysAndStrings;
 
 public class ImplementIndexOf {
 	public static int strStr(String haystack, String needle) {
