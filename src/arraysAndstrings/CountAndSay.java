@@ -1,4 +1,4 @@
-package ArraysAndStrings;
+package arraysAndstrings;
 
 public class CountAndSay {
 	public static String countAndSay(int n) {

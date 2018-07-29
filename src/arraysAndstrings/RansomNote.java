@@ -1,4 +1,4 @@
-package ArraysAndStrings;
+package arraysAndstrings;
 
 public class RansomNote {
 	public static boolean canConstruct(String ransomNote, String magazine) {

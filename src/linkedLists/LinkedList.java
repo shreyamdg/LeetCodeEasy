@@ -1,4 +1,4 @@
-package LinkedLists;
+package linkedLists;
 
 /*
  * author: Shreyam Duttagupta

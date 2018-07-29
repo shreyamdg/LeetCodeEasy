@@ -1,4 +1,4 @@
-package ArraysAndStrings;
+package arraysAndstrings;
 import java.util.HashMap;
 
 public class FirstUniqueChar {

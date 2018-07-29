@@ -1,4 +1,4 @@
-package ArraysAndStrings;
+package arraysAndstrings;
 
 public class LengthofLastWord {
 	public static int lengthOfLastWord(String s) {

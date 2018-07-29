@@ -1,4 +1,4 @@
-package ArraysAndStrings;
+package arraysAndstrings;
 import java.util.Stack;
 
 public class ValidParentheses {
