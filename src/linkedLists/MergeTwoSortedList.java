@@ -1,14 +1,5 @@
 package linkedLists;
 
-class ListNode {
-	int val;
-	ListNode next;
-
-	ListNode(int x) {
-		val = x;
-	}
-}
-
 public class MergeTwoSortedList {
 
 	public static ListNode mergeTwoLists(ListNode l1, ListNode l2) {
