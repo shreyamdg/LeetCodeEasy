@@ -2,26 +2,27 @@ package linkedLists;
 
 public class RemoveElements {
 
-	public ListNode removeElements(ListNode head, int val) {
-
-		ListNode curr = head.next;
+	public static ListNode removeElements(ListNode head, int val) {
+		if (head == null) {
+			return null;
+		}
 		ListNode pre = head;
-		while (curr != null) {
-			if (head == null) {
-				return null;
-			}
-			if (head.val == val)
+		while (pre != null) {
+			if (head.val == val) {
 				head = head.next;
-			else if (curr.val == val) {
+				pre = head;
+				continue;
+			}
+			ListNode curr = pre.next;
+
+			if (curr != null && curr.val == val) {
 				pre.next = curr.next;
-				curr = pre.next;
+				// curr = pre.next;
 			} else {
 				pre = pre.next;
-				curr = curr.next;
+				// curr = curr.next;
 			}
 		}
-
 		return head;
 	}
-
 }
