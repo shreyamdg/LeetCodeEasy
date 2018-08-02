@@ -17,10 +17,8 @@ public class RemoveElements {
 
 			if (curr != null && curr.val == val) {
 				pre.next = curr.next;
-				// curr = pre.next;
 			} else {
 				pre = pre.next;
-				// curr = curr.next;
 			}
 		}
 		return head;
