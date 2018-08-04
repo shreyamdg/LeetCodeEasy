@@ -102,27 +102,28 @@ public class LinkedList {
 	}
 	
 	public void insertAtPos(int val, int pos) {
-		if(head == null) {
+		if (head == null) {
 			head = new Node(val, null);
 			tail = head;
 			size++;
 		}
-		
-		if(pos == 0) {
+
+		if (pos == 0) {
 			insertAtStart(val);
+		} else {
+			Node newNode = new Node(val, null);
+			int currPos = 0;
+			Node currNode = head;
+			while (currPos < pos-1 && currNode.getNext() != null) {
+				currNode = currNode.getNext();
+				currPos++;
+			}
+
+			Node nodeInPos = currNode.getNext();
+			currNode.setNext(newNode);
+			newNode.setNext(nodeInPos);
+			size++;
 		}
-		Node newNode = new Node(val, null);
-		int currPos = 0;
-		Node currNode = head;
-		while(currPos < pos && currNode.getNext() != null) {
-			currNode = currNode.getNext();
-			currPos++;
-		}
-		
-		Node nodeInPos = currNode.getNext();
-		currNode.setNext(newNode);
-		newNode.setNext(nodeInPos);
-		size++;
 	}
 	
 	public void deleteAtPos(int pos) {
@@ -137,13 +138,11 @@ public class LinkedList {
 		if (pos <= size) {
 			int currPos = 0;
 			Node currNode = head;
-			while (currPos < pos && currNode.getNext() != null) {
+			while (currPos < pos-1 && currNode.getNext() != null) {
 				currNode = currNode.getNext();
 				currPos++;
 			}
-
-			Node temp = currNode.getNext().getNext();
-			currNode.setNext(temp);
+			currNode.setNext(currNode.getNext().getNext());
 			size--;
 		} else
 			return;
