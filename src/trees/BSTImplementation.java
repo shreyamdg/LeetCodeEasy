@@ -9,75 +9,76 @@ public class BSTImplementation {
 			this.data = val;
 		}
 
-		public void insert(int val) {
-			if (val <= data) {
-				if (left == null) {
-					left = new Node(val);
+		Node root;
+		public void insert(Node root, int val) {
+			if (val <= root.data) {
+				if (root.left == null) {
+					root.left = new Node(val);
 				} else {
-					left.insert(val);
+					root.left.insert(root, val);
 				}
 			} else {
-				if (right == null) {
-					right = new Node(val);
+				if (root.right == null) {
+					root.right = new Node(val);
 				} else {
-					right.insert(val);
+					root.right.insert(root, val);
 				}
 			}
 		}
 		
-		public boolean contains(int val) {
-			if(val == data) {
+		public boolean contains(Node root, int val) {
+			if(val == root.data) {
 				return true;
-			}else if(val < data) {
-				if(left == null) {
+			}else if(val < root.data) {
+				if(root.left == null) {
 					return false;
 				}else {
-					left.contains(val);
+					root.left.contains(root, val);
 				}	
 			}else {
-				if(right == null) {
+				if(root.right == null) {
 					return false;
 				}else {
-					right.contains(val);
+					root.right.contains(root, val);
 				}	
 			}
 			return false;
 		}
 		
 		public void printInOrder() {
-			if(left != null) {
-				left.printInOrder();
+			if(root.left != null) {
+				root.left.printInOrder();
 			}
 			
-			System.out.println(data);
+			System.out.println(root.data);
 			
-			if(right != null) {
-				right.printInOrder();
+			if(root.right != null) {
+				root.right.printInOrder();
 			}
 		}
 		
 		public void printPreOrder() {
-			System.out.println(data);
+			System.out.println(root.data);
 			
-			if(left != null) {
-				left.printInOrder();
+			if(root.left != null) {
+				root.left.printInOrder();
 			}
 			
-			if(right != null) {
-				right.printInOrder();
+			if(root.right != null) {
+				root.right.printInOrder();
 			}
 		}
 		
 		public void printPostOrder() {
-			if(left != null) {
-				left.printInOrder();
+			if(root.left != null) {
+				root.left.printInOrder();
 			}
 			
-			if(right != null) {
-				right.printInOrder();
+			if(root.right != null) {
+				root.right.printInOrder();
 			}
 			
-			System.out.println(data);
+			System.out.println(root.data);
 		}
 	}
 }
