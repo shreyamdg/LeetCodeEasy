@@ -10,6 +10,7 @@ public class BSTImplementation {
 		}
 
 		Node root;
+
 		public void insert(Node root, int val) {
 			if (val <= root.data) {
 				if (root.left == null) {
@@ -25,60 +26,61 @@ public class BSTImplementation {
 				}
 			}
 		}
-		
+
 		public boolean contains(Node root, int val) {
-			if(val == root.data) {
+			if (val == root.data) {
 				return true;
-			}else if(val < root.data) {
-				if(root.left == null) {
+			} else if (val < root.data) {
+				if (root.left == null) {
 					return false;
-				}else {
+				} else {
 					root.left.contains(root, val);
-				}	
-			}else {
-				if(root.right == null) {
+				}
+			} else {
+				if (root.right == null) {
 					return false;
-				}else {
+				} else {
 					root.right.contains(root, val);
-				}	
+				}
 			}
 			return false;
 		}
-		
+
 		public void printInOrder() {
-			if(root.left != null) {
+			if (root.left != null) {
 				root.left.printInOrder();
 			}
-			
+
 			System.out.println(root.data);
-			
-			if(root.right != null) {
+
+			if (root.right != null) {
 				root.right.printInOrder();
 			}
 		}
-		
+
 		public void printPreOrder() {
 			System.out.println(root.data);
-			
-			if(root.left != null) {
+
+			if (root.left != null) {
 				root.left.printInOrder();
 			}
-			
-			if(root.right != null) {
+
+			if (root.right != null) {
 				root.right.printInOrder();
 			}
 		}
-		
+
 		public void printPostOrder() {
-			if(root.left != null) {
+			if (root.left != null) {
 				root.left.printInOrder();
 			}
-			
-			if(root.right != null) {
+
+			if (root.right != null) {
 				root.right.printInOrder();
 			}
-			
+
 			System.out.println(root.data);
 		}
+
 	}
 }
