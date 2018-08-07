@@ -75,11 +75,15 @@ public class LinkedList {
 		return head == null;
 	}
 	
+	public ifHeadNull(Node head, int val){
+		head = new Node(val, null);
+		tail = head;
+		size++;
+	}
+	
 	public void insertAtStart(int val) {
 		if(head == null) {
-			head = new Node(val, null);
-			tail = head;
-			size++;
+			ifHeadNull(head,val);
 		}else {
 			Node firstNode = new Node(val,null);
 			firstNode.setNext(head);
@@ -90,9 +94,7 @@ public class LinkedList {
 	
 	public void insertAtEnd(int val) {
 		if(head == null) {
-			head = new Node(val, null);
-			tail = head;
-			size++;
+			ifHeadNull(head,val);
 		}else {
 			Node lastNode = new Node(val,null);
 			tail.setNext(lastNode);
@@ -103,9 +105,7 @@ public class LinkedList {
 	
 	public void insertAtPos(int val, int pos) {
 		if (head == null) {
-			head = new Node(val, null);
-			tail = head;
-			size++;
+			ifHeadNull(head,val);
 		}
 
 		if (pos == 0) {
