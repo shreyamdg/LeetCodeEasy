@@ -75,7 +75,7 @@ public class LinkedList {
 		return head == null;
 	}
 	
-	public ifHeadNull(Node head, int val){
+	public void ifHeadNull(Node head, int val){
 		head = new Node(val, null);
 		tail = head;
 		size++;
