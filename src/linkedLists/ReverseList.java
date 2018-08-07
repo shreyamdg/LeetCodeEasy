@@ -14,4 +14,16 @@ public class ReverseList {
 		}
 		return prevNode;
 	}
+	
+	public ListNode anotherSolution(ListNode head) {
+		ListNode prev = null;
+		while(head != null) {
+			ListNode newNode = new ListNode(head.val);
+			newNode.next = prev;
+			prev = newNode;
+			head = head.next;
+		}
+		
+		return prev;
+	}
 }
