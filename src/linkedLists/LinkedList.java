@@ -10,7 +10,6 @@ package linkedLists;
  */
 
 class Node {
-	
 	public int data;
 	public Node next;
 	
@@ -18,23 +17,6 @@ class Node {
 		this.data = data;
 		this.next = next;
 	}
-	
-	public int getData() {
-		return data;
-	}
-
-	public void setData(int data) {
-		this.data = data;
-	}
-
-	public Node getNext() {
-		return next;
-	}
-
-	public void setNext(Node next) {
-		this.next = next;
-	}
-	
 }
 
 /*
@@ -81,7 +63,7 @@ public class LinkedList {
 			ifHeadNull(head,val);
 		}else {
 			Node firstNode = new Node(val,null);
-			firstNode.setNext(head);
+			firstNode.next = head;
 			head = firstNode;
 			size++;
 		}
@@ -92,7 +74,7 @@ public class LinkedList {
 			ifHeadNull(head,val);
 		}else {
 			Node lastNode = new Node(val,null);
-			tail.setNext(lastNode);
+			tail.next = lastNode;
 			tail = lastNode;
 			size++;
 		}	
@@ -109,14 +91,14 @@ public class LinkedList {
 			Node newNode = new Node(val, null);
 			int currPos = 0;
 			Node currNode = head;
-			while (currPos < pos-1 && currNode.getNext() != null) {
-				currNode = currNode.getNext();
+			while (currPos < pos-1 && currNode.next != null) {
+				currNode = currNode.next;
 				currPos++;
 			}
 
-			Node nodeInPos = currNode.getNext();
-			currNode.setNext(newNode);
-			newNode.setNext(nodeInPos);
+			Node nodeInPos = currNode.next;
+			currNode.next = newNode;
+			newNode.next = nodeInPos;
 			size++;
 		}
 	}
@@ -127,17 +109,17 @@ public class LinkedList {
 		}
 
 		if (pos == 0) {
-			head = head.getNext();
+			head = head.next;
 			size--;
 		}
 		if (pos <= size) {
 			int currPos = 0;
 			Node currNode = head;
-			while (currPos < pos-1 && currNode.getNext() != null) {
-				currNode = currNode.getNext();
+			while (currPos < pos-1 && currNode.next != null) {
+				currNode = currNode.next;
 				currPos++;
 			}
-			currNode.setNext(currNode.getNext().getNext());
+			currNode.next = currNode.next.next;
 			size--;
 		} else
 			return;
@@ -152,7 +134,7 @@ public class LinkedList {
 			return null;
 		} else {
 			for (int i = 0; i < pos; i++) {
-				nodeInPos = nodeInPos.getNext();
+				nodeInPos = nodeInPos.next;
 			}
 			return nodeInPos;
 		}
@@ -163,7 +145,7 @@ public class LinkedList {
 		int index = 0;
 		while (currNode != node) {
 			index++;
-			currNode = currNode.getNext();
+			currNode = currNode.next;
 		}
 		return index;
 	}
@@ -173,8 +155,8 @@ public class LinkedList {
 		Node node = head;
 		while(node != null)
 		{
-			System.out.println(node.getData());
-			node = node.getNext();
+			System.out.println(node.data);
+			node = node.next;
 		}
 	}
 
