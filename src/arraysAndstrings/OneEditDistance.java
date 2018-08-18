@@ -1,7 +1,7 @@
 package arraysAndstrings;
 
 public class OneEditDistance {
-
+	
 	public boolean solution(String str1, String str2) {
 		int length1 = str1.length();
 		int length2 = str2.length();
@@ -17,6 +17,8 @@ public class OneEditDistance {
 			if (str1.charAt(i) != str2.charAt(j)) {
 				if (edits == 1)
 					return false;
+				
+				// If length of one string is more, then only possible edit is to remove a character
 				if (length1 > length2) {
 					i++;
 				} else if (length2 > length1) {
@@ -25,7 +27,6 @@ public class OneEditDistance {
 					i++;
 					j++;
 				}
-
 				edits++;
 			} else {
 				i++;
