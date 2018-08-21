@@ -22,4 +22,8 @@ public class StudentAttendenceRecord {
 		}
 		return true;
 	}
+	
+	public boolean checkRecordTwo(String s) {
+        return s.indexOf("LLL") == -1 && (s.indexOf('A') == s.lastIndexOf('A'));
+    }
 }
