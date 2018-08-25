@@ -29,3 +29,48 @@ class MinStack {
         return min;
     }
 }
+
+class MinStackAnotherway {
+    class ListNode{
+        int data;
+        int min;
+        ListNode next;
+        ListNode(int data){
+            this.data = data;
+            this.min = data;
+        }
+    }
+    
+    ListNode head;
+
+    /** initialize your data structure here. */
+    public MinStackAnotherway() {
+        head = null;
+    }
+    
+    public void push(int x) {
+        ListNode newval = new ListNode(x);
+        if(head == null){
+            head = newval;
+        }else{
+            newval.min = Math.min(x, head.min);
+            newval.next = head;
+            head = newval;
+        }
+    }
+    
+    public void pop() {
+        if(head == null){
+            return;
+        }
+        head = head.next;
+    }
+    
+    public int top() {
+        return head.data;
+    }
+    
+    public int getMin() {
+        return head.min;
+    }
+}
