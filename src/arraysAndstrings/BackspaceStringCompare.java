@@ -47,7 +47,6 @@ public class BackspaceStringCompare {
                 }else
                     ch2.pop();
             }else{
-                System.out.println("char: " + ch);
                 ch2.push(ch);
             }
         }
@@ -62,8 +61,6 @@ public class BackspaceStringCompare {
         while(!ch2.isEmpty()){
             s2.append(String.valueOf(ch2.pop()));
         }
-        
-        System.out.println(s1 + ":" + s2);
         
         return s1.toString().equals(s2.toString());
     }
