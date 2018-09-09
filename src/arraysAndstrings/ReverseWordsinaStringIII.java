@@ -27,4 +27,15 @@ public class ReverseWordsinaStringIII {
 
 		return sb.toString();
 	}
+	
+    public String reverseWords2(String s) {
+        String[] splitList = s.split(" ");
+        StringBuilder sb = new StringBuilder();
+        for(int i = 0; i < splitList.length; i++) {
+            sb.setLength(0);
+            sb.append(splitList[i]);
+            splitList[i] = sb.reverse().toString();
+        }
+        return String.join(" ", splitList);
+    }
 }
