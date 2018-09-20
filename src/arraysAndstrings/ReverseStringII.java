@@ -31,9 +31,4 @@ public class ReverseStringII {
 			start++;
 		}
 	}
-	
-	public static void main(String[] args) {
-		String str = "krmyfshbspcgtesxnnljhfursyissjnsocgdhgfxubewllxzqhpasguvlrxtkgatzfybprfmmfithphckksnvjkcvnsqgsgosfxc";
-		System.out.println(reverseStr(str, 20));
-	}
 }
