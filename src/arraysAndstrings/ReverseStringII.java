@@ -22,7 +22,6 @@ public class ReverseStringII {
 	}
 
 	public static void reverse(char[] arr, int start, int end) {
-		// int tail = end-1;
 		while (start < end) {
 			char ch = arr[start];
 			arr[start] = arr[end];
