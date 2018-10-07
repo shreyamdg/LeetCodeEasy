@@ -20,12 +20,16 @@ public class RemoveVowel {
 		return false;
 	}
 	
+	public static String removeVowelAnotherSol(String str) {
+		return str.replaceAll("[aeiouAEIOU]", "");
+	}
+	
 	public static void main(String [] args) {
-		System.out.println(removeVowel("GeeeksforGeeks - A Computer Science Portal for Geeks"));
-		System.out.println(removeVowel("welcome to geeksforgeeks"));
-		System.out.println(removeVowel("what is your name "));
-		System.out.println(removeVowel("wht s yr nm"));
-		System.out.println(removeVowel(" "));
-		System.out.println(removeVowel(""));
+		System.out.println(removeVowelAnotherSol("GeeeksforGeeks - A Computer Science Portal for Geeks"));
+		System.out.println(removeVowelAnotherSol("welcome to geeksforgeeks"));
+		System.out.println(removeVowelAnotherSol("what is your name "));
+		System.out.println(removeVowelAnotherSol("wht s yr nm"));
+		System.out.println(removeVowelAnotherSol(" "));
+		System.out.println(removeVowelAnotherSol(""));
 	}
 }
